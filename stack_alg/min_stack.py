@@ -1,3 +1,9 @@
+'''
+实现一个带有取最小值min方法的栈，min方法将返回当前栈中的最小值。
+你实现的栈将支持push，pop 和 min 操作，所有操作要求都在O(1)时间内完成。
+'''
+
+
 class MinStack:
     def __init__(self, value=None):
         self.__value = []
