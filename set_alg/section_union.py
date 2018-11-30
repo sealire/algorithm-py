@@ -14,7 +14,10 @@ def sec_union(secs, s):
         ss = nsecs.pop()
         sec = secs[i]
 
-        if sec[1] < ss[0]:
+        if sec[0] > ss[1]:
+            nsecs.append(ss)
+            nsecs.append(sec)
+        elif sec[1] < ss[0]:
             nsecs.append(sec)
             nsecs.append(ss)
         else:
@@ -26,4 +29,4 @@ def sec_union(secs, s):
 
 if __name__ == '__main__':
     secs = [[1, 2], [6, 7], [8, 10]]
-    sec_union(secs, [4, 5])
+    sec_union(secs, [4, 15])
